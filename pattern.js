@@ -12,19 +12,21 @@ while(raw <= userInput){
                 printValue = printValue + column;
                 console.log(printValue);
                 printValue = "";
-                // console.log(column);
                 break;
             }else{
                 printValue = printValue + column;
-                // console.log(printValue);
                 column=column-1
             }
         }else{
             printValue = printValue + column;
-            // console.log(printValue);
             column = column + 1
         }
     }
     raw = raw + 1;
 }
 
+// 1
+// 1 2 1
+// 1 2 3 2 1
+// 1 2 3 4 3 2 1
+// 1 2 3 4 5 4 3 2 1
