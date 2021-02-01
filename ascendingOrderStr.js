@@ -10,9 +10,9 @@ const cap_alfa = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M
 
 function indexOfStrChar(smallAlfa, capAlfa, userStr){
     let indexes = [];
-    let index = 0;
+    var index = 0;
     while(index < smallAlfa.length){
-        let alfa_index = 0;
+        let alfa_index = index + 1;
         while(alfa_index < smallAlfa.length){
             if(userStr[index] === smallAlfa[alfa_index]){
                 indexes.push(smallAlfa[alfa_index]);
@@ -40,3 +40,20 @@ function shortingOfIndexes(array){
     }
     return array;
 }
+
+let array_indexes = indexOfStrChar(smll_alfa);
+let shortOfIndexes = shortOfIndexes(array_indexes);
+
+let element = 0;
+while(element < userStr.length){
+    var alfa_index = shortOfIndexes[element];
+    if(smll_alfa[alfa_index] in userStr){
+        ascendingOrderStr += smll_alfa[alfa_index];
+    }
+    else if(cap_alfa[alfa_index] in userStr){
+        ascendingOrderStr += cap_alfa[alfa_index];
+    }
+    element += 1;
+}
+
+console.log(ascendingOrderStr);
