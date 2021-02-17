@@ -1,5 +1,30 @@
 var fs = require('fs');
-console.log("Process started");
-var data = fs.readFileSync('demo.txt');
-console.log(data.toString());
-console.log("Program ended");
+console.log("Program Started");
+fs.readFile('demo.txt', function(err, data){
+    if(err) return console.log(err);
+
+    console.log(data.toString);
+});
+console.log("Program Ended");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// var fs = require('fs');
+// console.log("Process started");
+// var data = fs.readFileSync('demo.txt');
+// console.log(data.toString());
+// console.log("Program ended");
