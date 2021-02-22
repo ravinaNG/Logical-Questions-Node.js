@@ -1,19 +1,11 @@
 var fs = require('fs');
 
-// console.log("Program Started");
-
-// function reading(err, data){
-//     if(err){
-//         return (console.log(err));
-//     }
-//     return (console.log(data));
-// }
-
-// fs.readFile('demo.txt', reading());
-// console.log("Program Ended");
-
-
-
+// run the code and see is it printing synchronously
+// undertand the flow and relate with what you have read with callback
+// callback we can understand by blocking code only
+// if we will make simple code and apply callback concept it won't work
+// like that because callback is the solution of blocking code 
+// so our code should have blocking functions like setTimeout(), readfile etc.
 
 console.log("Program Started");
 

@@ -1,13 +1,14 @@
 console.log("starting..");
 
-function processThis(callbackFunc, anything){
+function processThis(message, callbackFunc){
+    console.log("Running function first with: " + message);
+
     if(typeof callbackFunc == "function")
         callbackFunc();
-    console.log("Running function first with: " + anything);
 }
 
-processThis(function callFunction(){
+processThis("Hello World", function callFunction(){
     console.log("This is callback function.");
-}, 9);
+});
 
 console.log("Ending..");
