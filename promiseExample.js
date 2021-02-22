@@ -1,30 +1,38 @@
+const { resolve } = require("path");
+
 let class10 = true;
 let class12 = true;
 
-const checkEligibility = (cb, errCb) => {
+const checkEligibility = new Promise((resolve, reject) => {
   if (!class10) {
-    errCb({
+    reject({
       value: false,
       reason: "You are not eligible. You must be class 10 qualified",
     });
   } else if (!class12) {
-    errCb({
+    reject({
       value: false,
       reason: "You are not eligible. You must be class 12 qualified",
     });
   } else {
-    cb({
+    resolve({
       value: true,
       reason: "Congrats! You are eligible",
     });
   }
-};
+});
 
-checkEligibility(
-  (message) => {
-    console.log(`Success: ${JSON.stringify(message)}`);
-  },
-  (err) => {
-    console.log(`Failed: ${JSON.stringify(err)}`);
-  }
-);
+checkEligibility.then("Ravina"){
+  console.log(`Success: ${JSON.stringify(message)}`);
+}
+checkEligibility.catch("Ravina");
+
+
+// checkEligibility(
+//   (message) => {
+//     console.log(`Success: ${JSON.stringify(message)}`);
+//   },
+//   (err) => {
+//     console.log(`Failed: ${JSON.stringify(err)}`);
+//   }
+// );
