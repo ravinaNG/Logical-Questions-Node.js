@@ -22,17 +22,8 @@ const checkEligibility = new Promise((resolve, reject) => {
   }
 });
 
-checkEligibility.then("Ravina"){
-  console.log(`Success: ${JSON.stringify(message)}`);
-}
-checkEligibility.catch("Ravina");
-
-
-// checkEligibility(
-//   (message) => {
-//     console.log(`Success: ${JSON.stringify(message)}`);
-//   },
-//   (err) => {
-//     console.log(`Failed: ${JSON.stringify(err)}`);
-//   }
-// );
+checkEligibility.then((resolveVal) => {
+  console.log(`Success: ${JSON.stringify(resolveVal)}`);
+}).catch((rejectedVal) => {
+  console.log(`Failed: ${JSON.stringify(rejectedVal)}`);
+});
